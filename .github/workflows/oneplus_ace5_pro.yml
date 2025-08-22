@@ -118,7 +118,7 @@ jobs:
            echo "Applying hooks for SukiSU..."
            curl -LSs https://github.com/Tools-cx-app/gki_patch/raw/main/ksu_tracepoint_hooks_sukisu_5.10.236_0001.patch -o tp_hooks.patch
            patch -p1 -F 3 < tp_hooks.patch
-           fi
+           
            
            patch -p1 < 50_add_susfs_in_gki-android15-6.6.patch || true
            cp ../../SukiSU_patch/hooks/syscall_hooks.patch ./
